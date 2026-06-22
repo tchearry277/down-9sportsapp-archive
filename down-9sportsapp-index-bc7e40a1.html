@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九游体育 – 快速了解网站用途</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #fafafa;
+      color: #1e1e1e;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1.25rem;
+    }
+
+    .page {
+      max-width: 720px;
+      width: 100%;
+      margin-top: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    /* hero */
+    .hero {
+      padding: 3rem 0 2.5rem;
+      border-bottom: 1px solid #e4e4e7;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: #0a0a0a;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #52525b;
+      max-width: 580px;
+    }
+
+    /* 通用区块 */
+    section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid #e4e4e7;
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 550;
+      margin-bottom: 1.2rem;
+      color: #18181b;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      color: #27272a;
+    }
+
+    p, li {
+      color: #3f3f46;
+    }
+
+    .subdued {
+      color: #71717a;
+      font-size: 0.95rem;
+    }
+
+    /* 优势卡片 */
+    .advantage-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 0.25rem;
+    }
+
+    .advantage-card {
+      flex: 1 1 200px;
+      background: #ffffff;
+      padding: 1.5rem 1.25rem;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 0 0 1px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s;
+    }
+
+    .advantage-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05), 0 0 0 1px #d4d4d8;
+    }
+
+    .advantage-card h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .advantage-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* 说明区 */
+    .explain {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .explain-item {
+      padding-left: 0.25rem;
+      border-left: 3px solid #a1a1aa;
+      padding-left: 1rem;
+    }
+
+    .explain-item p {
+      margin-top: 0.2rem;
+    }
+
+    /* FAQ风格 */
+    .faq-list {
+      list-style: none;
+    }
+
+    .faq-list li {
+      padding: 1rem 0;
+      border-bottom: 1px dashed #e4e4e7;
+    }
+
+    .faq-list li:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      color: #18181b;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-a {
+      display: block;
+      color: #52525b;
+      font-size: 0.95rem;
+    }
+
+    /* 底部 */
+    .footer-links {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e4e4e7;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #71717a;
+    }
+
+    .footer-links a {
+      color: #27272a;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .footer-links a:hover {
+      border-bottom-color: #27272a;
+    }
+
+    .inline-link {
+      color: #2563eb;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+
+    .inline-link:hover {
+      color: #1e40af;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e4e4e7;
+      margin: 0;
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .advantage-card {
+        flex: 1 1 100%;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 0.6rem;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- hero -->
+    <div class="hero">
+      <h1>九游体育 · 用途速览</h1>
+      <p>面对一个网站，你首先想知道它做什么、是否对你有用。这里把 <a href="https://down-9sportsapp.com" class="inline-link">九游体育</a> 的核心信息整理成条目，帮你节省判断时间。</p>
+    </div>
+
+    <!-- 优势区 -->
+    <section>
+      <h2>为什么先看这里</h2>
+      <div class="advantage-grid">
+        <div class="advantage-card">
+          <h3>定位清晰</h3>
+          <p>网站围绕体育相关服务搭建，方向明确。进入后不必再费心猜测用途。</p>
+        </div>
+        <div class="advantage-card">
+          <h3>信息直接</h3>
+          <p>没有复杂的导航迷宫，关键内容在页面中就能找到，减少点击成本。</p>
+        </div>
+        <div class="advantage-card">
+          <h3>适配多种场景</h3>
+          <p>无论是初步了解，还是想快速获取资讯，九游体育都能覆盖基本需求。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 说明区 -->
+    <section>
+      <h2>使用场景解说</h2>
+      <div class="explain">
+        <div class="explain-item">
+          <h3>查找体育相关内容</h3>
+          <p>如果你正在寻找一类体育信息或工具入口，<a href="https://down-9sportsapp.com" class="inline-link">九游体育</a> 是这个方向上的一个集中站点。你可以从这里开始，再根据自身需要深入。</p>
+        </div>
+        <div class="explain-item">
+          <h3>比较与确认</h3>
+          <p>很多用户在打开一个网站前，会先评估其内容质量。本页列出的特点正是从实际使用角度出发，方便你做快速判断。</p>
+        </div>
+        <div class="explain-item">
+          <h3>日常参考</h3>
+          <p>对于持续关注体育动态的人来说，把九游体育纳入浏览清单，可以作为一个稳定的信息补充渠道。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+      <h2>常见疑问 · 简答</h2>
+      <ul class="faq-list">
+        <li>
+          <span class="faq-q">Q: 这个网站具体提供什么？</span>
+          <span class="faq-a">A: 主要围绕体育领域的资讯、资源或相关服务进行整合，适合对体育有兴趣的用户访问。</span>
+        </li>
+        <li>
+          <span class="faq-q">Q: 是否需要注册才能浏览？</span>
+          <span class="faq-a">A: 根据网站当前设置，大部分内容在首次访问时即可直接查看，具体可进入页面确认。</span>
+        </li>
+        <li>
+          <span class="faq-q">Q: 九游体育与同类网站有何不同？</span>
+          <span class="faq-a">A: 差异点在于它的内容编排更偏向直接展示，不绕弯，适合追求效率的用户。</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 底部链接区 -->
+    <div class="footer-links">
+      <span>内容索引 · 仅供参考</span>
+      <a href="https://down-9sportsapp.com">九游体育</a>
+      <span class="subdued">本页仅做介绍</span>
+    </div>
+  </div>
+</body>
+</html>
